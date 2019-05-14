@@ -1,0 +1,317 @@
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+/*City Animation*/
+#main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#welcome{
+    text-align: center;
+    margin-top: 4%;
+}
+#welcome-context{
+    font-size: 40px;
+    color: #00003f;
+}
+#stop-light{
+    text-align: center;
+}
+/*Buttons*/
+#play {
+  background-color: #5a7a9b; 
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor:pointer;
+}
+#green, #red {
+  background-color: #5a7a9b; 
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor:pointer;
+  position: relative;
+ top:-22px;
+}
+.city{
+	background: url(../images/city.jpg) bottom no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+/*Yellow Truck*/
+.yellow_truck {
+	background: url(../images/yellow_truck.png) no-repeat center center;
+    background-size: 200px 120px;
+	height: 225px;
+	width: 100%;
+	position: relative;
+	top: 65%;
+    left: 20%;
+	animation-name: yellow_truck;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 100;
+}
+@keyframes yellow_truck {
+    0% {
+        left:-100%;
+    }
+    50% {
+        left:0%;
+    }
+     100% {
+         left:100%;
+    }
+}
+.yellow_truck .yellow_truck_rim_one, .yellow_truck .yellow_truck_rim_two {
+	background: url(../images/truck-rim.png) no-repeat center center;
+	background-size: cover;
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	top: 65%;
+	animation-name: yellow_truck_rim;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.yellow_truck .yellow_truck_rim_one {
+	left: 44.75%;
+}
+.yellow_truck .yellow_truck_rim_two {
+	left: 53.95%;
+}
+@keyframes yellow_truck_rim {
+     0% {
+        transform: rotate(0deg);
+     }
+     50% {
+        transform: rotate(180deg);
+     }
+     100% {
+        transform: rotate(360deg);
+    }
+}
+/*Red Car*/
+.red_car {
+	background: url(../images/red_car.jpg) no-repeat center center;
+    background-size: 200px 100px;
+	height: 100px;
+	position: relative;
+    top:42.25%;
+	width: 100%;
+	animation-name: red_car;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 100;
+}
+@keyframes red_car{
+    0% {
+        left:-100%;
+    }
+    50% {
+        left:0%;
+    }
+     100% {
+         left:100%;
+    }
+}
+.red_car .red_car_rim_one, .red_car .red_car_rim_two {
+	background: url(../images/car-rim.png) no-repeat center center;
+	background-size: cover;
+	height: 38px;
+	width: 38px;
+	position: absolute;
+	top: 57.7%;
+	animation-name: red_car_rim;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.red_car .red_car_rim_one {
+	left: 42.7%;
+}
+.red_car .red_car_rim_two {
+	left: 54.40%;
+}
+@keyframes red_car_rim {
+     0% {
+        transform: rotate(0deg);
+     }
+     50% {
+        transform: rotate(180deg);
+     }
+     100% {
+        transform: rotate(360deg);
+    }
+}
+/*Jeep*/
+.jeep {
+	background: url(../images/blue_jeep.png) no-repeat center center;
+    background-size: 190px 100px;
+	height: 100px;
+	position: relative;
+	top: 19%;
+	width: 100%;
+	animation-name: jeep;
+	animation-duration: 12s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 90;
+}
+@keyframes jeep{
+    0% {
+        right:-100%;
+    }
+    50% {
+        right:0%;
+    }
+    100% {
+        right:100%;
+    }
+}
+
+.jeep .jeep_rim_one, .jeep .jeep_rim_two {
+	background: url(../images/jeep-rim.png) no-repeat center center;
+	background-size: cover;
+	height: 43px;
+	width: 43px;
+	position: absolute;
+	top: 57.4%;
+	animation-name: jeep_rim;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.jeep .jeep_rim_one {
+	left: 44.5%;
+}
+.jeep .jeep_rim_two {
+	left: 52.25%;
+}
+@keyframes jeep_rim{
+     0% {
+        transform: rotate(0deg);
+     }
+     50% {
+        transform: rotate(-180deg);
+     }
+     100% {
+        transform: rotate(-360deg);
+    }
+}
+/*Fire Truck*/
+.fire_truck {
+	background: url(../images/fire_truck.png) no-repeat center center;
+    background-size: 225px 150px;
+	height: 120px;
+	position: relative;
+	top: -6%;
+	width: 100%;
+	animation-name: fire_truck;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 80;
+}
+@keyframes fire_truck{
+    0% {
+        right:-100%;
+    }
+    50% {
+        right:0%;
+    }
+    100% {
+        right:100%;
+    }
+}
+
+.fire_truck .fire_truck_rim_one, .fire_truck .fire_truck_rim_two {
+	background: url(../images/fire_truck_wheel.png) no-repeat center center;
+	background-size: cover;
+	height:40px;
+	width: 40px;
+	position: absolute;
+	top: 69%;
+	animation-name: fire_truck_rim;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.fire_truck .fire_truck_rim_one {
+	left: 43%;
+}
+.fire_truck .fire_truck_rim_two {
+	left: 53%;
+}
+@keyframes fire_truck_rim{
+     0% {
+        transform: rotate(0deg);
+     }
+     50% {
+        transform: rotate(-180deg);
+     }
+     100% {
+        transform: rotate(-360deg);
+    }
+}
+/*Airplane*/
+.airplane {
+	background: url(../images/airplane.png) no-repeat center center;
+    background-size: 325px 250px;
+	height: 150px;
+	position: relative;
+	top: -92%;
+	width: 100%;
+	animation-name: airplane;
+	animation-duration: 25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    z-index: 80;
+}
+@keyframes airplane{
+    0% {
+        right:-100%;
+    }
+    50% {
+        right:0%;
+    }
+    100% {
+        right:100%;
+    }
+}
+#green-dot, #red-dot {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+#stop-light-title{
+    color:  #5a7a9b; 
+    margin-bottom: 5px;;
+}
+
+
+
+
